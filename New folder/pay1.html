@@ -1,0 +1,132 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <style>
+        body{ 
+        background: #4ad;       
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+     .fixed-footer{
+        width: 100%;
+        position: fixed;        
+        background: #333;
+        padding: 10px 0;
+        color: #fff;
+    }
+    .fixed-header{text-align:right;
+        width: 1350px;
+        margin-top: -80px;      
+        background: #333;
+        padding: 10px 0;
+        color: #fff;
+        top: 0;
+        margin-left: -10px;
+    }
+    .fixed-footer{
+        bottom: 0;
+    }  
+    .e{color: white;}  
+    /* Some more styles to beutify this example */
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 25px;
+        display: inline-block;
+         
+    }
+    nav a:hover{box-shadow: 10px 10px 10px #444;}
+    .container p{
+        line-height: 200px; /* Create scrollbar to test positioning */
+    }
+        .this_div{background-color:#05a;width: 600px;height: 450px;border-radius: 20px;
+            margin-left: 400px; margin-top: 100px; text-align: center;}     
+        td{ text-align: center; padding: 12px; font-size: 20px;   font-weight: bold;}       
+        .btn{ border-radius: 15px;  background-color: #333;   border-radius: 20px;
+            height: 50px;     width: 100px;font-size: 20px;font-weight: bold;
+            color:white;   border-color: black;   cursor: pointer;   position: absolute;}
+        .up_div{  margin-left: 400px;  margin-top: 35px;  position: absolute;
+            font-size: 20px ; font-weight: bold;    background-color: aquamarine ;
+               border-radius: 20px;        width:600px;   font-family:sans-serif;opacity: 0.5;}                       
+        #a{width: 600px;border-radius: 15px;  background-color: white;   border-radius: 20px;
+            height: 50px;     font-size: 20px;font-weight: bold; margin-left: 60px;  opacity: 0.5;}
+        #a:hover{opacity: 1;box-shadow: 10px 20px 30px blue; }
+        #aa{width: 600px;border-radius: 15px;  background-color: white;   border-radius: 20px;
+            height: 50px;text-align: center;     font-size: 20px;font-weight: bold; margin-left: 60px;}    
+    </style>
+</head>
+<body>
+    <div class="fixed-header">
+        <div class="container">
+            <nav>
+                <a href="#">حولنا</a>
+                <a href="#">منتجات اخرى </a>
+                <a href="#"> تواصل معنا </a>
+                <a href="#">الصفحة الرئيسية</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="up_div">
+<center><p>اختر طريقة الشراء</p></center>
+    </div>
+    <div class="this_div" >
+        <table width="100%" >
+           <tr>
+              <td><img src="mastercard.png" width="50px" height="50px"></td>
+              <td class="e">mastercard</td> 
+              <td><input id="r1" type="radio" name="om"></td>
+           </tr>
+           <tr>
+              <td><img src="aavisa.jpg" width="50px" height="50px"></td>
+              <td class="e">visa</td>   
+              <td><input id="r2" type="radio" name="om"></td>
+           </tr>
+           <tr>
+              <td><img src="westren.png" width="50px" height="50px"></td>
+              <td class="e">westren</td>  
+              <td><input id="r3"  type="radio" name="om"></td>
+           </tr>
+           <tr>
+              <td><img src="webmony.png" width="50px" height="50px"></td>  
+              <td class="e">webmony </td>   
+              <td><input id="r4" type="radio" name="om"></td>
+           </tr>
+           <tr>
+              <td><img src="maestro.png" width="50px" height="50px"></td> 
+              <td class="e">maestro </td>    
+              <td><input id="r5" type="radio" name="om"></td>
+           </tr>
+          
+                
+        </table>
+         
+  
+</div>
+<center>
+    <input id="aa"  placeholder="ادخل الكود الخاص بك"><br>
+ <input  type="button" value="شراء" id="a"onclick=" var v1=document.getElementById('r5').checked;
+                        var v2=document.getElementById('r4').checked;
+                        var v3=document.getElementById('r3').checked;
+                        var v4=document.getElementById('r2').checked;
+                        var v5=document.getElementById('r1').checked;
+                        var v6=document.getElementById('aa').value;
+                        if (v1==true||v2==true||v3==true||v4==true||v5==true){
+                            if(v6!='')
+                             {alert(' سيتم التاكد من الرقم السري لاحقا ')}
+                             else alert('الرجاء ادخال الرقم السري الخاص بالبطاقة'); }
+                            else{alert('الرجاء اختيار طريقة للدفع ')}
+                        ">
+</center>
+   <div class="fixed-footer">
+        <div class="container">Copyright &copy; 2020 A-Z-O company</div>        
+    </div>
+
+</body>
+
+
+</html>
